@@ -36,18 +36,24 @@ int main() {
 	
 	k = 0; //reset k
 	
-	//finding the max/min number
+	//finding the maximum number
 	inMax = inVal[0];
-	inMin = inVal[0];
 	for (k = 0; k < 5; k++) {
 		if (inVal[k] > inMax)
 			inMax = inVal[k];
 			//cout << "The maximum number is " << inVal[k] << endl;
-			
+	}
+	
+	k = 0; //reset k
+	
+	//finding the minimum number
+	inMin = inVal[0];
+	for (k = 0; k < 5; k++) {			
 		if (inVal[k] < inMin)
 			inMin = inVal[k];
 			//cout << "The minimum number is " << inVal[k] << endl;	
 	}
+	
 	
 	k = 0; //reset k
 	
@@ -74,7 +80,7 @@ int main() {
 	} while (k < 5);
 	
 	ofstream outfile;
-	outfile.open("165_5_cesar_v2.dta");
+	outfile.open("165_5_cesar_v3.dta");
 	//displaying the values on the text
 	outfile << endl;
 	outfile << setw(35) << "Integer Report" << endl;
