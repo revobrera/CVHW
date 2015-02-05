@@ -45,8 +45,8 @@ int main()
 		outfile.open("con");
 	else
 	 {
-	 	//prints to a .dta file on the same directory called, 165_2_cesar_v2.dta
-	 	outfile.open("165_2_cesar_v3.dta", ios::out);
+	 	//prints to a .dta file on the same directory called, 165_2_cesar.dta
+	 	outfile.open("165_2_cesar.dta", ios::out);
 	 }
 	 outfile << setiosflags(ios::showpoint | ios::fixed) << setprecision(2);
 	 

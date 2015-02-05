@@ -78,8 +78,8 @@ int main()
 		else
 		 {
 		 	//prints to a .dta file on the same directory called, 165_3_cesar_[employee initials]_v1.dta
-		 	//outfile.open("165_4_cesar_MB_v1.dta", ios::out);
-		 	outfile.open("165_4_cesar_v1.dta", std::ios_base::app); //appends additional employees to the same file
+		 	//outfile.open("165_4_cesar_MB.dta", ios::out);
+		 	outfile.open("165_4_cesar.dta", std::ios_base::app); //appends additional employees to the same file
 		 }
 		 outfile << setiosflags(ios::showpoint | ios::fixed) << setprecision(2);
 		 
