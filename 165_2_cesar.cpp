@@ -10,9 +10,10 @@
 
 #include<fstream>
 #include<iomanip>
-#include<string>
+#include<string.h>
 #include<iostream>
 #include<math.h>
+#include<conio.h>
 
 
 using namespace std;
@@ -29,10 +30,26 @@ int main()
 		my_product,
 		my_remainder,
 		my_op2_power4,
-		my_whole_quotient;
+		my_whole_quotient,
+		user_resp;
 	double my_real_quotient,
 		my_sqrt_op1;
-
+	
+	ofstream outfile;
+	cout << "(1) Display output to console or (2) save output to .dta file" <<endl;
+	cin >> user_resp;
+	
+	//user is prompted to output from the console or to a .dta file
+	if (user_resp == 1)
+		//prints to the console
+		outfile.open("con");
+	else
+	 {
+	 	//prints to a .dta file on the same directory called, 165_2_cesar_v2.dta
+	 	outfile.open("165_2_cesar_v3.dta", ios::out);
+	 }
+	 outfile << setiosflags(ios::showpoint | ios::fixed) << setprecision(2);
+	 
 	//clears screen first
 	system("cls");
 	//enter operands
@@ -115,22 +132,23 @@ int main()
     */
     
 	//output or display section
-	cout << setw(56) << "=================================" << endl;
-	cout << setw(56) << "Mini Calculator by Cesar Villamil" << endl;
-	cout << setw(56) << "=================================" << endl;
-	cout << setw(14) << "Operand 1" << setw(34) << "Operand 2" <<endl;
-	cout << setw(14) << "_________" << setw(34) << "_________" <<endl;
-	cout << setw(14) << my_operand1 << setw(34) << my_operand2 <<endl;
-	cout << endl;
-	cout << setw(8) << "Sum" << setw(16) << "Difference" << setw(13) << "Product" << setw(20) << "Whole Quotient" << setw(15) << "Remainder" <<endl;
-	cout << setw(8) << "___" << setw(16) << "__________" << setw(13) << "_______" << setw(20) << "______________" << setw(15) << "_________" <<endl;
-	cout << setw(8) << my_sum << setw(16) << my_difference << setw(13) << my_product << setw(20) << my_whole_quotient << setw(15) << my_remainder << endl;
-	cout << endl;
-	cout << setw(18) << "Real Quotient" << setw(27) << "Square Root of Operand 1" << setw(30) << "Operand 2 to the power of 4" <<endl;
-	cout << setw(18) << "_____________" << setw(27) << "________________________" << setw(30) << "___________________________" <<endl;
-	cout << setw(18) << my_real_quotient << setw(27) << my_sqrt_op1 << setw(30) << my_op2_power4 <<endl;
+	outfile << setw(56) << "=================================" << endl;
+	outfile << setw(56) << "Mini Calculator by Cesar Villamil" << endl;
+	outfile << setw(56) << "=================================" << endl;
+	outfile << setw(14) << "Operand 1" << setw(34) << "Operand 2" <<endl;
+	outfile << setw(14) << "_________" << setw(34) << "_________" <<endl;
+	outfile << setw(14) << my_operand1 << setw(34) << my_operand2 <<endl;
+	outfile << endl;
+	outfile << setw(8) << "Sum" << setw(16) << "Difference" << setw(13) << "Product" << setw(20) << "Whole Quotient" << setw(15) << "Remainder" <<endl;
+	outfile << setw(8) << "___" << setw(16) << "__________" << setw(13) << "_______" << setw(20) << "______________" << setw(15) << "_________" <<endl;
+	outfile << setw(8) << my_sum << setw(16) << my_difference << setw(13) << my_product << setw(20) << my_whole_quotient << setw(15) << my_remainder << endl;
+	outfile << endl;
+	outfile << setw(18) << "Real Quotient" << setw(27) << "Square Root of Operand 1" << setw(30) << "Operand 2 to the power of 4" <<endl;
+	outfile << setw(18) << "_____________" << setw(27) << "________________________" << setw(30) << "___________________________" <<endl;
+	outfile << setw(18) << my_real_quotient << setw(27) << my_sqrt_op1 << setw(30) << my_op2_power4 <<endl;
 	
-	cout<<endl<<endl;
+	outfile << endl<<endl;
+	outfile.close();
 	system("pause");
 	return 0;
 	
