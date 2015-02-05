@@ -1,4 +1,7 @@
 //Cesar Villamil
+//CIS 165 Fundamentals of Programming
+//April 22nd, 2014
+//Looping structures with arrays
 
 #include <fstream>
 #include <stdio.h>      
@@ -12,7 +15,7 @@ using namespace std;
 
 int main() {
 	//variables
-	int inVal[5],
+	int inVal[10],
 		inMax,
 		inMin,
 		inTot,
@@ -48,10 +51,15 @@ int main() {
 	
 	k = 0; //reset k
 	
-	do {
+	//do {
+		//cout << inVal[k] << " ";
+		//k++;
+	//} while (k < 5);
+	
+	while (k < 5) {
 		cout << inVal[k] << " ";
 		k++;
-	} while (k < 5);
+	}
 	
 	
 	k = 0; //reset k
@@ -66,7 +74,7 @@ int main() {
 	} while (k < 5);
 	
 	ofstream outfile;
-	outfile.open("outfile.dta");
+	outfile.open("165_5_cesar_v2.dta");
 	//displaying the values on the text
 	outfile << endl;
 	outfile << setw(35) << "Integer Report" << endl;
