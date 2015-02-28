@@ -1,38 +1,74 @@
+///* 
+//=================
+//Exercises 4.4 | #2
+//=================
+//*/
+////2)
+//
+//#include <iostream>
+//using namespace std;
+//
+//int main() {
+//	int factor;
+//	float pressure;
+//	
+//	cout << "Enter a number factor: ";
+//	cin >> factor;
+//	
+//	switch (factor) {
+//		case 1:
+//			pressure = 25.0f;
+//			break;
+//		case 2:
+//			pressure = 36.0f;
+//			break;
+//		case 3:
+//			pressure = 45.0f;
+//			break;
+//		default:
+//			//Any number other than 1, 2, or 3
+//			pressure = 49.0f;
+//	}
+//	
+//	cout << "The factor: " << factor << " Pressure is: " << pressure << endl;
+//	return 0;
+//}
+
 /* 
 =================
-Exercises 4.4 | #2
+Exercises 4.4 | #4
 =================
 */
-//2)
+//4)
 
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-int main() {
-	int factor;
-	float pressure;
+int main()
+{
+	char code;
 	
-	cout << "Enter a number factor: ";
-	cin >> factor;
+	cout << "Enter a specification code: ";
+	cin >> code;
 	
-	switch (factor) {
-		case 1:
-			pressure = 25.0f;
+	switch (code) {
+		case 'S':
+			cout << "The item is space exploration grade.";
 			break;
-		case 2:
-			pressure = 36.0f;
+		case 'M':
+			cout << "The item is military grade.";
 			break;
-		case 3:
-			pressure = 45.0f;
+		case 'C':
+			cout << "The item is commercial grade";
+			break;
+		case 'T':
+			cout << "The item is toy grade.";
 			break;
 		default:
-			//Any number other than 1, 2, or 3
-			pressure = 49.0f;
+			cout << "An invalid code was entered.";
+			cout << endl;
 	}
+		
 	
-	cout << "The factor: " << factor << " Pressure is: " << pressure << endl;
-	return 0;
+	//return 0;
 }
-
-
-
