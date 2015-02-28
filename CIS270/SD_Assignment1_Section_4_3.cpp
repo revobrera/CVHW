@@ -127,3 +127,5 @@ int main()
 	return 0;
 }
 
+//a. Will this program produce the same output as Program 4.6?
+//b. Which program is better and why?
