@@ -27,7 +27,7 @@ int main() {
   	
   	
   	
-	  if ( inputNum % divNum == 0 )
+	if ( inputNum % divNum == 0 )
        cout << inputNum << " is divisible by " << divNum << endl;	
   	else   
        cout << inputNum << " is not divisible by " << divNum << endl;	
